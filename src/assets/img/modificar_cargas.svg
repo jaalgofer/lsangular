@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="172px"
+	 height="142px" viewBox="0 0 172 142" enable-background="new 0 0 172 142" xml:space="preserve">
+<g id="Capa_5">
+	<polyline fill="#F9F9F9" points="15.438,139.544 15.438,3.544 86.616,3.544 116.438,33.325 116.438,139.544 	"/>
+	<line fill="none" stroke="#666666" stroke-width="4" stroke-miterlimit="10" x1="23.438" y1="120.544" x2="109.438" y2="120.544"/>
+	<line fill="none" stroke="#666666" stroke-width="4" stroke-miterlimit="10" x1="23.438" y1="109.544" x2="109.438" y2="109.544"/>
+	<line fill="none" stroke="#666666" stroke-width="4" stroke-miterlimit="10" x1="23.438" y1="99.544" x2="109.438" y2="99.544"/>
+	<line fill="none" stroke="#666666" stroke-width="4" stroke-miterlimit="10" x1="23.438" y1="89.544" x2="109.438" y2="89.544"/>
+	<line fill="none" stroke="#666666" stroke-width="4" stroke-miterlimit="10" x1="23.438" y1="68.544" x2="109.438" y2="68.544"/>
+	<line fill="none" stroke="#666666" stroke-width="4" stroke-miterlimit="10" x1="23.438" y1="37.544" x2="69.438" y2="37.544"/>
+	<line fill="none" stroke="#666666" stroke-width="4" stroke-miterlimit="10" x1="23.438" y1="27.544" x2="69.438" y2="27.544"/>
+	<line fill="none" stroke="#666666" stroke-width="4" stroke-miterlimit="10" x1="23.438" y1="59.544" x2="109.438" y2="59.544"/>
+	<line fill="none" stroke="#666666" stroke-width="4" stroke-miterlimit="10" x1="23.438" y1="77.544" x2="109.438" y2="77.544"/>
+	<line fill="none" stroke="#666666" stroke-width="4" stroke-miterlimit="10" x1="23.438" y1="46.544" x2="69.438" y2="46.544"/>
+	<g>
+		<defs>
+			<polygon id="SVGID_1_" points="86.615,33.325 116.438,63.088 116.438,33.366 86.615,3.544 			"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
+		</clipPath>
+		<defs>
+			<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="86.615" y="3.544" width="29.822" height="59.544">
+				<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+			</filter>
+		</defs>
+		<mask maskUnits="userSpaceOnUse" x="86.615" y="3.544" width="29.822" height="59.544" id="SVGID_3_">
+			<g filter="url(#Adobe_OpacityMaskFilter)">
+				
+					<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="16.0054" y1="143.3809" x2="17.006" y2="143.3809" gradientTransform="matrix(0 -81.6608 -81.6608 0 11810.0771 1392.2386)">
+					<stop  offset="0" style="stop-color:#808080"/>
+					<stop  offset="0.4" style="stop-color:#808080"/>
+					<stop  offset="1" style="stop-color:#808080"/>
+				</linearGradient>
+				<rect x="86.615" y="3.543" clip-path="url(#SVGID_2_)" fill="url(#SVGID_4_)" width="29.822" height="59.544"/>
+			</g>
+		</mask>
+		
+			<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="16.0054" y1="143.3809" x2="17.006" y2="143.3809" gradientTransform="matrix(0 -81.6608 -81.6608 0 11810.0771 1392.2394)">
+			<stop  offset="0.2512" style="stop-color:#DDDDDD;stop-opacity:0.1"/>
+			<stop  offset="0.4286" style="stop-color:#DDDDDD;stop-opacity:0.3"/>
+			<stop  offset="1" style="stop-color:#333333;stop-opacity:0.8"/>
+		</linearGradient>
+		
+			<rect x="86.615" y="3.544" clip-path="url(#SVGID_2_)" mask="url(#SVGID_3_)" fill="url(#SVGID_5_)" width="29.822" height="59.544"/>
+	</g>
+	<polygon fill="#FFFFFF" points="116.438,33.325 86.616,33.325 86.611,3.544 	"/>
+	<polyline fill="none" points="145.438,0.544 3.438,0.544 3.438,142.544 	"/>
+</g>
+<g id="Capa_4">
+	<g>
+		<defs>
+			<polygon id="XMLID_7_" points="115.654,32.781 115.653,139 14.654,139 14.654,3 85.832,3 			"/>
+		</defs>
+		<clipPath id="XMLID_2_">
+			<use xlink:href="#XMLID_7_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#XMLID_2_)">
+			<path fill="#F9F9F9" stroke="#F9F9F9" stroke-width="5" stroke-miterlimit="10" d="M154.32,74.64L97.02,132.5H72.5v-23.9
+				l58.38-57.29c1.95-1.96,5.54-1.96,7.5,0l15.726,15.885C156.055,69.145,156.27,72.69,154.32,74.64z"/>
+		</g>
+	</g>
+</g>
+<g id="Capa_2">
+	<g>
+		<g>
+			<path fill="#F3A744" d="M97.021,131.188l46.927-46.928l-22.582-22.583l-46.928,46.927c0,8.782,0,13.8,0,22.583l0,0
+				C83.22,131.188,88.237,131.188,97.021,131.188z"/>
+			<rect x="74.438" y="108.56" fill="#E7C5A9" width="22.628" height="22.628"/>
+			<path fill="#F16C9F" d="M154.318,73.89l-5.215,5.215l-22.583-22.583l5.215-5.215c1.953-1.953,5.119-1.953,7.071,0l15.512,15.511
+				C156.271,68.771,156.271,71.937,154.318,73.89z"/>
+			
+				<rect x="131.588" y="54.422" transform="matrix(-0.7072 0.707 -0.707 -0.7072 280.6367 24.5533)" fill="#C0DBF6" width="7.291" height="31.937"/>
+			
+				<rect x="131.606" y="62.346" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 280.6399 24.5223)" fill="#9EB9D0" width="7.271" height="16.075"/>
+			<path fill="#F6D753" d="M97.118,119.873l41.235-41.235l-11.367-11.367l-41.235,41.236c0,4.42,0,6.946,0,11.366l0,0
+				C90.172,119.873,92.697,119.873,97.118,119.873z"/>
+			<g>
+				<defs>
+					<rect id="SVGID_6_" x="74.438" y="108.56" width="22.628" height="22.628"/>
+				</defs>
+				<clipPath id="SVGID_7_">
+					<use xlink:href="#SVGID_6_"  overflow="visible"/>
+				</clipPath>
+				<polygon clip-path="url(#SVGID_7_)" fill="#333333" points="74.434,131.184 74.437,122.265 83.361,131.188 				"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="172px"
+	 height="142px" viewBox="0 0 172 142" enable-background="new 0 0 172 142" xml:space="preserve">
+<g id="color_monitor">
+	<polyline fill="#95A5A6" points="11,19 162,19 162,100 11,100 11,19 	"/>
+</g>
+<g id="sombra">
+	<polygon fill="#7F8C8D" points="162,19 162,100 52.352,100 95.701,19 	"/>
+</g>
+<g id="Capa_1">
+	
+		<rect x="11" y="19" fill="none" stroke="#333333" stroke-width="6" stroke-linejoin="round" stroke-miterlimit="10" width="151" height="81"/>
+	
+		<rect x="52" y="124" fill="#333333" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="69" height="7"/>
+	
+		<rect x="78" y="100" fill="#333333" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="19" height="24"/>
+</g>
+<g id="ojo">
+	<path fill="#F3F3F3" d="M31.589,62.744c0,0,55.223-65.607,109.436,0C86.609,118.929,31.589,62.744,31.589,62.744z"/>
+	<circle fill="#7ED3EF" cx="87.769" cy="60.054" r="21.438"/>
+	<circle fill="#333333" cx="87.635" cy="60.323" r="14.158"/>
+	<circle fill="#DDDDDD" cx="82.51" cy="56.009" r="4.044"/>
+</g>
+</svg>
