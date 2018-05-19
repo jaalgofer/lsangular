@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbaradminComponent implements OnInit {
 
+  openNavBar:boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleNavBar():void{
+    this.openNavBar = !this.openNavBar;
   }
 
 }

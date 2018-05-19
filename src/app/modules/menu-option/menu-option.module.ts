@@ -1,16 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { AdminRoutingModule } from './admin-routing.module';
+import { MenuOptionComponent } from '../../components/menu-option/menu-option.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     CommonModule,
-    AdminRoutingModule,
   ],
-  declarations: [],
-  exports: [AdminRoutingModule]
+  declarations: [MenuOptionComponent],
+  exports: [MenuOptionComponent]
 })
-export class AdminModule { }
+export class MenuOptionModule { }

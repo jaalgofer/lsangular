@@ -1,3 +1,184 @@
-<p>
-  docentes works!
-</p>
+<div class="content w-100 transitionMedium">
+  <div class="form-style">
+    <h1>Registro de Profesores</h1>
+    <div style="position: relative; height: 75vh;">
+      <div class="panelGrv transitionFast">
+        <div class="ContentSearch input-group" onmouseover="Buscador.buscarOver()" onmouseout="Buscador.buscarOut('BUSCAR POR NOMBRE / APELLIDO / N° CEDULA')">
+          <input id="txtBuscar" class="transitionFast" type="text" name="buscar" onclick="Buscador.limpiar(event)" onkeyup="Buscador.buscarDato('grvDocente', 'txtBuscar', dataPorIdDocente)"
+            placeholder="BUSCAR POR NOMBRE / APELLIDO / N° CEDULA">
+        </div>
+        <div style="height: 82.5%; overflow: hidden; overflow-y: auto;">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="textLeft">Cedula</th>
+                <th class="textRight">Docente</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody class="transitionFast" id="grvDocente">
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="panelForm transitionFast">
+        <div>
+          <ul class="navTabList">
+            <li>
+              <a href="#" data-content="#contentDataPrincipal" id="1" onclick="navTab(this)" class="transitionFast active">Datos Personales</a>
+            </li>
+            <li>
+              <a href="#" data-content="#contentDataAcademico" id="2" onclick="navTab(this)" class="transitionFast">Datos Academicos</a>
+            </li>
+          </ul>
+        </div>
+        <form id="formTcDocente">
+          <div class="OnSelectNavTab transitionFast" id="tdDocente">
+            <div id="contentDataPrincipal">
+              <p style="color: #D32F2F; font-weight: 700; text-align:center; margin-top: 10px;">* (Campo Obligatorio)</p>
+              <input type="hidden" id="IdDocente">
+              <div class="col-24">
+                <div class="col-8">
+                  <div class="input-group">
+                    <label for="nombre">* Nombre</label>
+                    <input type="text" [(ngModel)]="nombre" name="nombre" id="nombre" placeholder="Nombres:" class="transitionFast" required="required" pattern="^[a-zA-ZáéíóúàèìòùÀÈÌÒÙÁÉÍÓÚñÑüÜ._\s]+$">
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="input-group">
+                    <label for="apellido">* Apellido</label>
+                    <input type="text" [(ngModel)]="apellido" name="apellido" id="apellido" class="transitionFast" placeholder="Apellidos:" required="required" pattern="^[a-zA-ZáéíóúàèìòùÀÈÌÒÙÁÉÍÓÚñÑüÜ._\s]+$">
+                  </div>
+                </div>
+
+                <div class="col-8">
+                  <div style="margin-top: 1rem;">* Cedula</div>
+                  <div class="col-24">
+                    <div class="col-6">
+                      <div class="input-group select" style="padding: 0rem 0.3rem;">
+                        <select name="nacionalidad" [(ngModel)]="nacionalidad" id="select_cedula">
+                          <option value="V">V</option>
+                          <option value="E">E</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-18">
+                      <div class="input-group" style="padding: 0rem 0.3rem;">
+                        <input class="transitionFast" [(ngModel)]="cedula" id="cedula" type="text" name="cedula" id="cedula" placeholder="Cedula:" onblur="DocenteControllers.validador.validarExistencia()"
+                          required="required" pattern="^[0-9]+$">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-24">
+                <div class="col-6">
+                  <div class="input-group">
+                    <label for="telefono">* Telefono</label>
+                    <input class="transitionFast" type="text" [(ngModel)]="telefono" name="telefono" id="telefono" placeholder="Numero Telefonico:" required="required"
+                      pattern="^[0-9-()+]{3,20}">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="input-group">
+                    <label for="correo">* Correo</label>
+                    <input class="transitionFast" type="email" [(ngModel)]="correo" name="correo" id="correo" placeholder="Correo Electronico:" required="required"
+                      pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="input-group">
+                    <label for="fechaNacimiento">* Fecha de Nacimiento</label>
+                    <input class="transitionFast"  [(ngModel)]="fecha_nacimiento" style="padding: 0.82rem 0.3rem" type="date" name="fechaNacimiento" id="fechaNacimiento" placeholder="Fecha De Nacimiento (aaaa-mm-dd)"
+                      required="required">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-24">
+                <div class="input-group">
+                  <label>* Direccion</label>
+                  <textarea class="transitionFast" [(ngModel)]="direccion" id="direccion" placeholder="Direccion de Residencia:" required="required"></textarea>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="input-group checkbox">
+                  <input class="transitionFast" [(ngModel)]="activo" type="checkbox" id="Activo" />
+                  <label for="Activo" class="transitionFast">Activo</label>
+                </div>
+              </div>
+
+            </div>
+            <div id="contentDataAcademico" style="display: none;">
+
+              <div class="input-group">
+                <label for="fec_ing">* Fecha de Ingreso:</label>
+                <input class="transitionFast" [(ngModel)]="fecha_ingreso" type="date" name="fec_ing" id="fec_ing" placeholder="Fecha De Ingreso (aaaa-mm-dd)" required="required">
+              </div>
+
+              <div class="input-group">
+                <label>* Profesion</label>
+                <input class="transitionFast" [(ngModel)]="profesion" type="text" name="profesion" id="profesion" placeholder="Profesion:" required="required" pattern="^[a-zA-ZáéíóúàèìòùÀÈÌÒÙÁÉÍÓÚñÑüÜ._\s]+$">
+              </div>
+              <div class="col-24">
+                <div class="col-12">
+                  <div class="input-group select">
+                    <label>* Dedicacion</label>
+                    <select class="transitionFast" [(ngModel)]="dedicacion" name="dedicacion" id="select_dedicacion" required="required">
+                      <option value="">DEDICACION</option>
+                      <option value="tiempo convencional">Tiempo Convencional</option>
+                      <option value="medio tiempo">Medio Tiempo</option>
+                      <option value="tiempo completo">Tiempo completo</option>
+                      <option value="dedicacion exclusiva">Dedicacion Exclusiva</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="input-group select">
+                    <label>* Categoria</label>
+                    <select class="transitionFast" [(ngModel)]="categoria" name="categoria" id="select_categoria" required="required">
+                      <option value="">CATEGORIA</option>
+                      <option value="instructor">Instructor</option>
+                      <option value="asistente">Asistente</option>
+                      <option value="agregado">Agregado</option>
+                      <option value="asociado">Asociado</option>
+                      <option value="titular">Titular</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-24">
+                <div class="input-group radio">
+                  <div>* Condicion</div>
+                  <input class="transitionFast" [(ngModel)]="condicion" type="radio" name="condicion" value="Contratado" id="contratado">
+                  <label for="contratado" class="transitionFast">Contratado</label>
+                  <input class="transitionFast" [(ngModel)]="condicion" type="radio" name="condicion" value="Ordinario" id="ordinario">
+                  <label for="ordinario" class="transitionFast">Ordinario</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+    <div class="contentBtnAcciones">
+      <div class="contentBtnCRUD">
+        <div class="btn-acciones btnControlCRUD">
+          <button class="BtnStyleDefault transitionFast" id="btnAgregar" onclick="DocenteAccciones.accionesMenuDocente(1);">Agregar</button>
+          <button class="BtnStyleDefault transitionFast" id="btnEditar" onclick="DocenteAccciones.accionesMenuDocente(2);">Editar</button>
+          <button class="BtnStyleDefault" id="btnEliminar" onclick="DocenteAccciones.accionesMenuDocente(3);">Eliminar</button>
+        </div>
+      </div>
+      <div class="contentBtnControlAfirmacion">
+        <div class="btn-acciones btnControlAfirmacion">
+          <button class="BtnStyleDefault transitionFast" id="btnAceptar" disabled="disabled">Aceptar</button>
+          <button class="BtnStyleDefault transitionFast" id="btnCancelar" disabled="disabled">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

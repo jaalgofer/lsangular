@@ -1,6 +1,6 @@
-<header class="content-nav-bar transitionMedium">
+<header class="content-nav-bar {{openNavBar ? 'content-nav-bar-open' : ''}} transitionMedium">
 
-  <div class="header__iconbottom" id="header__iconbottom">
+  <div class="header__iconbottom" (click)="toggleNavBar()">
     <div class="barNavBar transitionFast"></div>
     <div class="barNavBar transitionFast"></div>
     <div class="barNavBar transitionFast"></div>
@@ -19,7 +19,7 @@
     <section class='header__navbar--list'>
 
       <article class='header__navbar--list-opc'>
-        <a href='/'>
+        <a [routerLink]="admin/menu">
           <p> Inicio </p>
         </a>
       </article>
@@ -31,7 +31,7 @@
       </article>
 
       <article class='header__navbar--list-opc'>
-        <a href='../mod_docentes/verDocentes.php'>
+        <a [routerLink]="admin/docentes">
           <p> Visualizar los Docentes </p>
         </a>
       </article>
