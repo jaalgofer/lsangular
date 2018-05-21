@@ -7,56 +7,34 @@
   </div>
 
   <nav class="header__navbar">
-    <div class='nav-bar-username'>
-      <p></p>
-    </div>
     <div class='header__navbar--iconuser'>
-      <a href='index.php'>
+      <a [routerLink]="['./']" (click)="toggleNavBar()">
         <img src='../../../assets/img/LOADSSCHEDULE.svg'>
       </a>
     </div>
-
+    <div class='nav-bar-username'>
+      <p>{{user}}</p>
+    </div>
     <section class='header__navbar--list'>
 
-      <article class='header__navbar--list-opc'>
-        <a [routerLink]="admin/menu">
-          <p> Inicio </p>
-        </a>
+      <article class='header__navbar--list-opc' [routerLink]="['./']" (click)="toggleNavBar()">
+        <p> Inicio </p>
       </article>
 
-      <article class='header__navbar--list-opc'>
-        <a href='../mod_cargaHoraria/verUserHora.php'>
-          <p> Cargas Horarias </p>
-        </a>
+      <article class='header__navbar--list-opc' [routerLink]="['carga-horaria']" (click)="toggleNavBar()">
+        <p> Cargas Horarias </p>
       </article>
 
-      <article class='header__navbar--list-opc'>
-        <a [routerLink]="admin/docentes">
-          <p> Visualizar los Docentes </p>
-        </a>
+      <article class='header__navbar--list-opc' [routerLink]="['docentes']" (click)="toggleNavBar()">
+        <p> Visualizar los Docentes </p>
       </article>
 
-      <article class='header__navbar--list-opc'>
-        <a href='../mod_mensajeria/buzonAdmin.php'>
-          <p style='display: inline-block'>Buzón De Mensajes</p>
-          <i class='header__navbar--newmsj MsjRec' id='$estado'></i>
-        </a>
+      <article class='header__navbar--list-opc' [routerLink]="['buzon']" (click)="toggleNavBar()">
+        <p style='display: inline-block'>Buzón De Mensajes</p>
+        <i class='header__navbar--newmsj MsjRec' id='$estado'></i>
       </article>
-
-      <article class='header__navbar--list-opc'>
-        <a href='../mod_opciones_avanzadas/opciones_avanzadas.php'>
-          <p> Opciones Avanzadas </p>
-        </a>
-      </article>
-      <article class='header__navbar--list-opc'>
-        <a href=''>
-          <p> Ayuda </p>
-        </a>
-      </article>
-      <article class='header__navbar--list-opc'>
-        <a href='#' onclick='logOut()'>
-          <p> Cerrar Sesión </p>
-        </a>
+      <article class='header__navbar--list-opc' (click)="logout()">
+        <p> Cerrar Sesión </p>
       </article>
     </section>
 

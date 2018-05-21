@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
-import { AppRoutingModule } from './app-routing.module';
 
+import { AppRoutingModule } from './app-routing.module';
 import { MenuModule } from "./modules/menu/menu.module";
 import { LoginModule } from "./modules/login/login.module";
+import { CoreModule } from './modules/core/core.module';
 
 import { AppComponent } from './app.component';
 
@@ -15,9 +16,10 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    CoreModule,
     LoginModule,
     MenuModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

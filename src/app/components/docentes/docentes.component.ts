@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { DocenteService } from "../../services/docente.service";
+
 @Component({
   selector: 'app-docentes',
   templateUrl: './docentes.component.html',
   styleUrls: ['./docentes.component.css']
 })
+
 export class DocentesComponent implements OnInit {
-  id: number;
+
   nombre: string;
   apellido: string;
   cedula: string;

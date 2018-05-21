@@ -1,29 +1,29 @@
-<div class="content-menu-option" onclick="window.location.href='../mod_docentes/verDocentes.php'">
+<div class="content-menu-option" [routerLink]="['docentes']">
   <div class="cont_img">
     <img src="../../../../assets/img/profesor.svg" alt="" title="menu de opciones de docente">
   </div>
   <p>Docentes</p>
 </div>
-<div class="content-menu-option" onclick="window.location.href='../mod_cargaHoraria/verUserHora.php'">
+<div class="content-menu-option" [routerLink]="['carga-horaria']">
   <div class="cont_img">
     <img src="../../../../assets/img/subir_cargas.svg" alt="" title="subir permanencia a un docente">
   </div>
   <p>Cargas Horarias</p>
 </div>
-<div class="content-menu-option" onclick="window.location.href='../mod_pass/verificarPass.php'">
+<div class="content-menu-option" [routerLink]="['cambiar-pass-admin']">
   <div class="cont_img">
     <img src="../../../../assets/img/cambiar_contrasena.svg" alt="" title="cambiar contraseña">
   </div>
   <p>Cambiar Contraseña Admin</p>
 
 </div>
-<div class="content-menu-option" onclick="window.location.href='../mod_periodo/definirPeriodo.php'">
+<div class="content-menu-option" [routerLink]="['periodo']">
   <div class="cont_img">
     <img src="../../../../assets/img/calendario.svg" alt="" title="periodo actual del trimestre">
   </div>
   <p>Establecer Periodo</p>
 </div>
-<div class="content-menu-option" onclick="window.location.href='../mod_pass/restablecerPass.php'">
+<div class="content-menu-option" [routerLink]="['res-pass-usuario']">
   <div class="cont_img">
     <img src="../../../../assets/img/restablecer.svg" alt="" title="restablecer contraseña de un docente">
   </div>

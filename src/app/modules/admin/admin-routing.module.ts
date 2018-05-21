@@ -5,17 +5,31 @@ import { DocentesComponent } from '../../components/docentes/docentes.component'
 import { CargahorariaComponent } from '../../components/cargahoraria/cargahoraria.component';
 import { PermanenciaComponent } from '../../components/permanencia/permanencia.component';
 import { ConfigComponent } from '../../components/config/config.component';
+import { PeriodoComponent } from '../../components/periodo/periodo.component';
+import { CambiarPassAdminComponent } from '../../components/cambiar-pass-admin/cambiar-pass-admin.component';
+import { ResPassUsuarioComponent } from '../../components/res-pass-usuario/res-pass-usuario.component';
+import { BuzonComponent } from '../../components/buzon/buzon.component';
+
 
 const routes: Routes = [
-  { path: 'docentes', component: DocentesComponent },
-  { path: 'cargahoraria', component: CargahorariaComponent },
-  { path: 'permanencia', component: PermanenciaComponent },
-  { path: 'config', component: ConfigComponent }
+  // { path: 'admin/docentes', component: DocentesComponent },
+  // { path: 'admin/cargahoraria', component: CargahorariaComponent },
+  // { path: 'admin/permanencia', component: PermanenciaComponent },
+  // { path: 'admin/config', component: ConfigComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes), FormsModule],
   exports: [RouterModule],
-  declarations: [DocentesComponent, CargahorariaComponent, PermanenciaComponent, ConfigComponent]
+  declarations: [
+    DocentesComponent,
+    CargahorariaComponent,
+    BuzonComponent,
+    PermanenciaComponent,
+    ConfigComponent,
+    PeriodoComponent,
+    CambiarPassAdminComponent,
+    ResPassUsuarioComponent
+  ]
 })
 export class AdminRoutingModule { }

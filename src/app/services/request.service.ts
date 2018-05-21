@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpHeaders } from "@angular/common/http";
+import { HttpHeaders, HttpParams } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -7,13 +7,15 @@ import { HttpHeaders } from "@angular/common/http";
 export class RequestService {
   constructor() { }
 
-  structBody(data: any):string{
-    let _params:string = "";
-    for (let key in data) _params += `&${key}=${data[key]}`;
-    return _params;
+  public structParams(data: any):object{
+    return this.factoryParams(data);
   }
 
-  structHeaders(): object {
+  public structBody(data: any):object{
+    return this.factoryParams(data);
+  }
+
+  public structHeaders(): object {
 
     const httpOptions:object = {
       headers: new HttpHeaders({
@@ -22,6 +24,15 @@ export class RequestService {
     };
 
     return httpOptions;
+  }
+
+  private factoryParams(data: object):object{
+    let _httpParams = new HttpParams();
+    for (let key in data) {
+      _httpParams = _httpParams.set(key, data[key]);
+    }
+    return _httpParams;
+
   }
 
 }

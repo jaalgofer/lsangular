@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from "../../services/login.service";
+import { SessionService } from "../../services/session.service";
 import { Router } from '@angular/router';
-
+import { StorageService } from "../../services/storage.service";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,7 +13,11 @@ export class LoginComponent implements OnInit {
   password: string;
   statusButton: boolean = false;
 
-  constructor(private LoginService: LoginService, private router: Router) { }
+  constructor(
+    private SessionService$: SessionService, 
+    private StorageService$: StorageService,
+    private router: Router
+  ) { }
 
   accion(): void {
     this.statusButton = !this.statusButton;
@@ -30,9 +34,10 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
-    this.LoginService.loginPost$(this.objParam())
+    this.SessionService$.login(this.objParam())
       .subscribe(resp => {
         console.log(resp);
+        this.StorageService$.setCurrentSession(resp.data);
         this.statusButton = !this.statusButton;
         this.router.navigate(['menu']);
       }, resp => this.statusButton = !this.statusButton);
