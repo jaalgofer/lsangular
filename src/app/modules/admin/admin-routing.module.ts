@@ -10,7 +10,7 @@ import { CambiarPassAdminComponent } from '../../components/cambiar-pass-admin/c
 import { ResPassUsuarioComponent } from '../../components/res-pass-usuario/res-pass-usuario.component';
 import { BuzonComponent } from '../../components/buzon/buzon.component';
 
-
+import { Docentes } from "../../models/class/docentes";
 const routes: Routes = [
   // { path: 'admin/docentes', component: DocentesComponent },
   // { path: 'admin/cargahoraria', component: CargahorariaComponent },
@@ -30,6 +30,7 @@ const routes: Routes = [
     PeriodoComponent,
     CambiarPassAdminComponent,
     ResPassUsuarioComponent
-  ]
+  ],
+  providers: [Docentes]
 })
 export class AdminRoutingModule { }

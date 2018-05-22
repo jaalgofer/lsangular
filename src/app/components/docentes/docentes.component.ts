@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DocenteService } from "../../services/docente.service";
+import { Title } from "@angular/platform-browser";
+import { Docentes } from '../../models/class/docentes';
 
 @Component({
   selector: 'app-docentes',
@@ -9,32 +11,20 @@ import { DocenteService } from "../../services/docente.service";
 
 export class DocentesComponent implements OnInit {
 
-  nombre: string;
-  apellido: string;
-  cedula: string;
-  nacionalidad: string;
-  telefono: string;
-  correo: string;
-  direccion: string;
-  fecha_nacimiento: string;
-  fecha_ingreso: string;
-  profesion: string;
-  dedicacion: string;
-  categoria: string;
-  condicion: string;
-  activo: boolean;
+  docenteModel = new Docentes();
 
-  constructor(private DocenteService$: DocenteService) { }
+  constructor(private DocenteService$: DocenteService, private title: Title) { }
 
   getAllDocentes() {
 
     const _requestViewAllDocente = this.DocenteService$.viewAllDocente();
 
-    _requestViewAllDocente.subscribe(resp => console.log(resp));
+    _requestViewAllDocente.subscribe(resp =>console.log(resp));
 
   }
 
   ngOnInit() {
+    this.title.setTitle('Docentes - Loads Schedule');
     this.getAllDocentes();
   }
 
