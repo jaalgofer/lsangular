@@ -3,9 +3,8 @@
     <h1>Registro de Profesores</h1>
     <div style="position: relative; height: 75vh;">
       <div class="panelGrv transitionFast">
-        <div class="ContentSearch input-group" onmouseover="Buscador.buscarOver()" onmouseout="Buscador.buscarOut('BUSCAR POR NOMBRE / APELLIDO / N° CEDULA')">
-          <input id="txtBuscar" class="transitionFast" type="text" name="buscar" onclick="Buscador.limpiar(event)" onkeyup="Buscador.buscarDato('grvDocente', 'txtBuscar', dataPorIdDocente)"
-            placeholder="BUSCAR POR NOMBRE / APELLIDO / N° CEDULA">
+        <div class="ContentSearch input-group">
+          <input id="txtBuscar" class="transitionFast" [(ngModel)]="keywords" type="text" name="buscar" placeholder="BUSCAR POR NOMBRE / APELLIDO / N° CEDULA">
         </div>
         <div style="height: 82.5%; overflow: hidden; overflow-y: auto;">
           <table class="table">
@@ -17,6 +16,10 @@
               </tr>
             </thead>
             <tbody class="transitionFast" id="grvDocente">
+            <!-- <tr *ngFor="let docente of dataDocente | async">
+              <td>{{docente.cedula}}</td>
+              <td>{{docente.nombre}} {{docente.apellido}}</td>
+            </tr> -->
             </tbody>
           </table>
         </div>

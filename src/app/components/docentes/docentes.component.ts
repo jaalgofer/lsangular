@@ -12,14 +12,18 @@ import { Docentes } from '../../models/class/docentes';
 export class DocentesComponent implements OnInit {
 
   docenteModel = new Docentes();
-
+  dataDocente;
+  keywords:string;
   constructor(private DocenteService$: DocenteService, private title: Title) { }
 
   getAllDocentes() {
 
     const _requestViewAllDocente = this.DocenteService$.viewAllDocente();
 
-    _requestViewAllDocente.subscribe(resp =>console.log(resp));
+    _requestViewAllDocente.subscribe(resp => {
+      this.dataDocente = resp;
+      console.log(resp);
+    });
 
   }
 
