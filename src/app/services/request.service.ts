@@ -29,7 +29,7 @@ export class RequestService {
   private factoryParams(data: object):object{
     let _httpParams = new HttpParams();
     for (let key in data) {
-      _httpParams = _httpParams.set(key, data[key]);
+      _httpParams = _httpParams.set(key, JSON.stringify(data[key]));
     }
     return _httpParams;
 

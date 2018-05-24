@@ -8,9 +8,7 @@ const routes: Routes = [
 
   { path: 'login', component: LoginComponent },
   { path: 'menu', loadChildren: './modules/menu/menu.module#MenuModule', canActivateChild: [AuthGuard]},
-  // { path: 'menu', loadChildren: './modules/menu/menu.module#MenuModule', canActivate: [AuthGuard]},
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  //{path:'**'}
 ];
 
 @NgModule({

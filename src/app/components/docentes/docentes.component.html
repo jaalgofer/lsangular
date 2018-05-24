@@ -2,7 +2,7 @@
   <div class="form-style">
     <h1>Registro de Profesores</h1>
     <div style="position: relative; height: 75vh;">
-      <div class="panelGrv transitionFast">
+      <div class="panelGrv transitionFast display-sm-block">
         <div class="ContentSearch input-group">
           <input id="txtBuscar" class="transitionFast" [(ngModel)]="keywords" type="text" name="buscar" placeholder="BUSCAR POR NOMBRE / APELLIDO / N° CEDULA">
         </div>
@@ -10,21 +10,21 @@
           <table class="table">
             <thead>
               <tr>
-                <th class="textLeft">Cedula</th>
-                <th class="textRight">Docente</th>
+                <th class="text-left">Cedula</th>
+                <th class="text-right">Docente</th>
                 <th></th>
               </tr>
             </thead>
             <tbody class="transitionFast" id="grvDocente">
-            <!-- <tr *ngFor="let docente of dataDocente | async">
-              <td>{{docente.cedula}}</td>
-              <td>{{docente.nombre}} {{docente.apellido}}</td>
-            </tr> -->
+            <tr *ngFor="let docente of dataDocente" (click)="donceteSelect(docente.IdDocente)">
+              <td class="text-left">{{docente.cedula}}</td>
+              <td class="text-right">{{docente.nombre}} {{docente.apellido}}</td>
+            </tr>
             </tbody>
           </table>
         </div>
       </div>
-      <div class="panelForm transitionFast">
+      <div class="panelForm transitionFast display-none display-sm-block">
         <div>
           <ul class="navTabList">
             <li>
@@ -169,14 +169,14 @@
       </div>
     </div>
     <div class="contentBtnAcciones">
-      <div class="contentBtnCRUD">
+      <div class="contentBtnCRUD display-sm-block">
         <div class="btn-acciones btnControlCRUD">
           <button class="BtnStyleDefault transitionFast" id="btnAgregar" onclick="DocenteAccciones.accionesMenuDocente(1);">Agregar</button>
           <button class="BtnStyleDefault transitionFast" id="btnEditar" onclick="DocenteAccciones.accionesMenuDocente(2);">Editar</button>
           <button class="BtnStyleDefault" id="btnEliminar" onclick="DocenteAccciones.accionesMenuDocente(3);">Eliminar</button>
         </div>
       </div>
-      <div class="contentBtnControlAfirmacion">
+      <div class="contentBtnControlAfirmacion display-none display-sm-block">
         <div class="btn-acciones btnControlAfirmacion">
           <button class="BtnStyleDefault transitionFast" id="btnAceptar" disabled="disabled">Aceptar</button>
           <button class="BtnStyleDefault transitionFast" id="btnCancelar" disabled="disabled">Cancelar</button>

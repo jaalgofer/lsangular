@@ -27,6 +27,10 @@ export class DocentesComponent implements OnInit {
 
   }
 
+  public donceteSelect(id){
+    console.log(id);
+  }
+
   ngOnInit() {
     this.title.setTitle('Docentes - Loads Schedule');
     this.getAllDocentes();

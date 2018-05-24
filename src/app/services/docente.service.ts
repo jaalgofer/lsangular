@@ -10,25 +10,24 @@ import { ModConfig } from "../models/class/mod-config";
 
 export class DocenteService {
 
-  _host:string;
   private ModConfig;
+  private _URL:string;
   constructor(
     private HttpClient: HttpClient,
     private RequestService$: RequestService,
   ) { 
     this.ModConfig = new ModConfig();
-
-    this._host = `${this.ModConfig.host}/api-ls/controllers/helpers/CargarDatos.php`;
+    this._URL = this.ModConfig.host + this.ModConfig.default;
   }
 
   viewAllDocente(): Observable<any> {
 
-    const data = { 'tipo': 1, 'datos': ''};
+    const data = { data:{tipo: 1, datos: ''}};
 
     const _httpOptions = this.RequestService$.structHeaders();
     const _params = this.RequestService$.structBody(data);
 
-    return this.HttpClient.post(this._host, _params, _httpOptions);
+    return this.HttpClient.get(`${this._URL}/helpers/CargarDatos.php?${_params}`);
   }
 
   viewIdDocente(data: Docentes): Observable<any> {
@@ -36,28 +35,28 @@ export class DocenteService {
     const _httpOptions = this.RequestService$.structHeaders();
     const _params = this.RequestService$.structBody(data);
 
-    return this.HttpClient.post(this._host, _params, _httpOptions);
+    return this.HttpClient.post(this._URL, _params, _httpOptions);
   }
 
   createDocente(data: Docentes): Observable<any>{
     const _httpOptions = this.RequestService$.structHeaders();
     const _params = this.RequestService$.structBody(data);
 
-    return this.HttpClient.post(this._host, _params, _httpOptions);
+    return this.HttpClient.post(this._URL, _params, _httpOptions);
   }
 
   updateDocente(data: Docentes): Observable<any> {
     const _httpOptions = this.RequestService$.structHeaders();
     const _params = this.RequestService$.structBody(data);
 
-    return this.HttpClient.post(this._host, _params, _httpOptions);
+    return this.HttpClient.post(this._URL, _params, _httpOptions);
   }
 
   deleteDocente(data: Docentes): Observable<any> {
     const _httpOptions = this.RequestService$.structHeaders();
     const _params = this.RequestService$.structBody(data);
 
-    return this.HttpClient.post(this._host, _params, _httpOptions);
+    return this.HttpClient.post(this._URL, _params, _httpOptions);
   }
 
 
